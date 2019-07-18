@@ -1,0 +1,30 @@
+##Triadic closure: The tendency of nodes orentities in a network who share relations to
+become connected themselves
+USE TRIADIC CLUOSURE TO MAKE RECCS BASED ON LOCATION OF USERS AND SIMILARITY OF TASTES
+
+****RECC#1 BASED ON USER LOCATION: SIMPLE GRAPH, DISTANCE AS WEIGHTS. CLOSENESS CENTRALITY.***
+#Use this to make recommendations based on location (Closeness centrality, weights determined by distance)
+
+#To figure out local clustering coefficient.
+nx.average_clustering(Simple_Graph)
+
+#Include latitutde and longitude information 
+#(Tabitha is downloading a google package to map, 
+#if that doesn't work, we can use distance formula for lat and long.
+
+#Determine distance between the two nodes 
+nx.all_simple_paths(Graph, Node1, Node2)
+nx.shortest_path(Graph, Node1, Node2)
+nx.shortest_path_length(Graph, Node1,
+Node2)
+
+****RECC#2 BASED ON USERS WITH SIMILAR TASTES: SIMILARITY. BIPARTITE GRAPH, DEGREE CENTRALITY, USING GLOBAL CLUSTERING COEFF.
+#GLOBAL CLUSTERING COEFFICIENT
+nx.average_clustering(Graph)
+
+#using bipartite graph USERS VS COFFEE SHOPS
+
+#determine degree centrality local cluStering coeffic
+
+#Is this user strongly connected?? 
+nx.is_strongly_connected(Graph)
