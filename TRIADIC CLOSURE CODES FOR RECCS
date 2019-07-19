@@ -5,6 +5,37 @@ USE TRIADIC CLUOSURE TO MAKE RECCS BASED ON LOCATION OF USERS AND SIMILARITY OF 
 ****RECC#1 BASED ON USER LOCATION: SIMPLE GRAPH, DISTANCE AS WEIGHTS. CLOSENESS CENTRALITY.***
 #Use this to make recommendations based on location (Closeness centrality, weights determined by distance)
 
+#Make a simple graph
+#code G as graph
+G = nx.Graph()
+
+#add edges to our graph
+G.add_edge('A','B')
+
+# Keep on adding edges like so...
+G.add_edge('C','D')
+
+#Can also add numbers as edges
+G.add_edge(1, 2)
+
+#Add nodes
+G.add_node('X')
+
+#Create a list of edges instead. Remember edges are pairs of nodes.
+temp_list = [('X', 'B'),('A', 'X'), (1, 'B')]
+G.add_edges_from(temp_list)
+G.add_nodes_from([3, 4, 5])
+G.add_edge(2, 2)
+G.number_of_nodes()
+G.number_of_edges()
+
+#selfloop is an edge that starts and ends at same node.
+G.number_of_selfloops()
+
+#Summary of network
+#Degree= number of nodes to which a particular node is connected
+print(nx.info(G))
+
 #To figure out local clustering coefficient.
 nx.average_clustering(Simple_Graph)
 
