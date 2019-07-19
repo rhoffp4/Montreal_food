@@ -1,0 +1,7 @@
+import os
+import tarfile
+from six.moves import urllib
+from bokeh.io import output_file, output_notebook, show
+from bokeh.models import (GMapPlot, GMapOptions, ColumnDataSource, Circle, LogColorMapper, BasicTicker, ColorBar, DataRange1d, PanTool, WheelZoomTool, BoxSelectTool)
+from bokeh.models.mappers import ColorMapper, LinearColorMapper
+from bokeh.palettes import Viridis5
