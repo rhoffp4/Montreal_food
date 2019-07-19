@@ -59,3 +59,11 @@ nx.average_clustering(Graph)
 
 #Is this user strongly connected?? 
 nx.is_strongly_connected(Graph)
+
+#function to make recomendations based on similarity
+def rec_teams(G, fan1, fan2):
+    if G.node[fan1]['bipartite'] == G.node[fan2]['bipartite']:
+        nbrs1 = G.neighbors(fan1)
+        nbrs2 = G.neighbors(fan2)
+        difference = set(nbrs1).difference(nbrs2)
+        return difference
